@@ -5,7 +5,7 @@
 - Name: 尹成果
 - Student ID: 12310923
 - Class: 01
-- GitHub Repository: TODO: 填写公开 GitHub 链接
+- GitHub Repository: https://github.com/Cheng-g-Y/learning-task-tracker
 
 ## Project Overview
 

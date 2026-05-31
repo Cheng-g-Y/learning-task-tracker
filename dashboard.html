@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习任务追踪器 | 任务面板</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MIS 205 · Part 2</p>
+        <h1>学习任务追踪器</h1>
+      </div>
+      <div class="user-actions">
+        <span id="user-email"></span>
+        <button id="logout-button" class="button ghost" type="button">退出登录</button>
+      </div>
+    </header>
+
+    <main class="page-grid">
+      <aside class="sidebar">
+        <section class="panel">
+          <h2>课程分类</h2>
+          <form id="category-form" class="inline-form">
+            <input name="name" maxlength="60" placeholder="例如：数据库" required>
+            <button class="button primary" type="submit">添加</button>
+          </form>
+          <label>
+            筛选任务
+            <select id="category-filter">
+              <option value="">全部课程</option>
+            </select>
+          </label>
+        </section>
+
+        <section class="panel">
+          <h2>添加任务</h2>
+          <form id="task-form" class="stack">
+            <label>
+              标题
+              <input name="title" maxlength="120" required>
+            </label>
+            <label>
+              描述
+              <textarea name="description" rows="3" maxlength="500"></textarea>
+            </label>
+            <label>
+              截止日期
+              <input name="due_date" type="date">
+            </label>
+            <label>
+              所属课程
+              <select id="new-task-category" name="category_id">
+                <option value="">未分类</option>
+              </select>
+            </label>
+            <button class="button primary" type="submit">保存任务</button>
+          </form>
+        </section>
+      </aside>
+
+      <section class="content">
+        <div class="content-heading">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>我的任务</h2>
+          </div>
+          <span id="task-count" class="badge">0 个任务</span>
+        </div>
+        <div id="message" class="message hidden" role="status"></div>
+        <div id="task-list" class="task-list"></div>
+        <div id="empty-state" class="empty-state hidden">
+          <h3>暂时没有任务</h3>
+          <p>从左侧添加一项学习任务，开始安排你的计划。</p>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="js/tasks.js"></script>
+  </body>
+</html>

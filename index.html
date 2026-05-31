@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习任务追踪器 | 登录</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="auth-page">
+    <main class="auth-shell">
+      <section class="brand-panel">
+        <p class="eyebrow">MIS 205 · Part 2</p>
+        <h1>学习任务追踪器</h1>
+        <p>按课程整理任务，把下一步安排得清清楚楚。</p>
+      </section>
+
+      <section class="auth-card">
+        <div class="tabs" role="tablist" aria-label="认证方式">
+          <button class="tab active" type="button" data-auth-tab="login">登录</button>
+          <button class="tab" type="button" data-auth-tab="register">注册</button>
+        </div>
+
+        <div id="message" class="message hidden" role="status"></div>
+
+        <form id="login-form" class="stack">
+          <label>
+            邮箱
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" autocomplete="current-password" minlength="6" required>
+          </label>
+          <button class="button primary" type="submit">登录</button>
+        </form>
+
+        <form id="register-form" class="stack hidden">
+          <label>
+            邮箱
+            <input type="email" name="email" autocomplete="email" required>
+          </label>
+          <label>
+            密码
+            <input type="password" name="password" autocomplete="new-password" minlength="6" required>
+          </label>
+          <button class="button primary" type="submit">创建账号</button>
+          <p class="help">如果 Supabase 开启邮箱确认，请先在邮箱中确认账号再登录。</p>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="js/auth.js"></script>
+  </body>
+</html>

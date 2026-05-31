@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习任务追踪器 | 编辑任务</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MIS 205 · Part 2</p>
+        <h1>编辑任务</h1>
+      </div>
+      <a class="button ghost" href="dashboard.html">返回任务面板</a>
+    </header>
+
+    <main class="single-column">
+      <section class="panel">
+        <div id="message" class="message hidden" role="status"></div>
+        <form id="edit-task-form" class="stack">
+          <label>
+            标题
+            <input name="title" maxlength="120" required>
+          </label>
+          <label>
+            描述
+            <textarea name="description" rows="5" maxlength="500"></textarea>
+          </label>
+          <label>
+            截止日期
+            <input name="due_date" type="date">
+          </label>
+          <label>
+            所属课程
+            <select name="category_id">
+              <option value="">未分类</option>
+            </select>
+          </label>
+          <label class="checkbox-label">
+            <input name="completed" type="checkbox">
+            已完成
+          </label>
+          <button class="button primary" type="submit">保存修改</button>
+        </form>
+      </section>
+    </main>
+    <script type="module" src="js/edit.js"></script>
+  </body>
+</html>

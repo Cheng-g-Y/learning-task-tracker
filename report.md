@@ -13,14 +13,31 @@
 
 ## Screenshots
 
-提交前插入以下现场截图：
+### Authentication
 
-1. 注册页面和注册成功提示
-2. 登录页面
-3. 新增任务
-4. 查看任务列表
-5. 编辑任务
-6. 删除任务后的任务列表
+| Registration | Login |
+| --- | --- |
+| ![Registration page](screenshots/register.png) | ![Login page](screenshots/login.png) |
+
+### Task CRUD
+
+| Dashboard after registration | Add a course category |
+| --- | --- |
+| ![Dashboard](screenshots/dashboard.png) | ![Add category](screenshots/add-category.png) |
+
+| Enter a new task | View the saved task |
+| --- | --- |
+| ![Add task](screenshots/add-task.png) | ![Task list](screenshots/task-list.png) |
+
+| Edit and mark the task as completed | Delete the task |
+| --- | --- |
+| ![Edit task](screenshots/edit-task.png) | ![Delete task](screenshots/delete-task.png) |
+
+### Supabase And GitHub
+
+| Supabase hosted tables | Merged GitHub pull requests |
+| --- | --- |
+| ![Supabase tables](screenshots/supabase-tables.png) | ![GitHub pull requests](screenshots/github-prs.png) |
 
 ## ER Diagram
 
